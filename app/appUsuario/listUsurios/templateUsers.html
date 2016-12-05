@@ -7,14 +7,20 @@
             <th>#</th>
             <th>Nombre</th>
             <!--<th>Apellido</th>-->
+            <th>Nombre Usuario</th>
+            <th>Teléfono</th>
             <th>Correo</th>
+            <th>Ciudad</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let usuario of lUsuarios">
             <th scope="row"  >{{usuario.id}}</th>
             <th scope="row"  >{{usuario.name}}</th>
+            <th scope="row"  >{{usuario.username}}</th>
+            <th scope="row"  >{{usuario.phone}}</th>
             <th scope="row"  >{{usuario.email}}</th>
+             <th scope="row"  >{{usuario.address.city}}</th>
             </tr>
         </tbody>
     </table>    

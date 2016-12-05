@@ -27,6 +27,10 @@ export class ComponentUsers implements OnInit{
             if ((<String>usuario['name']).includes(' ')) {
                 usuario['name'] = (<String>usuario['name']).split(' ')[0].trim()
             }
+
+            if ((<String>usuario['email'])!== null && (<String>usuario['email'])!== undefined) {
+                usuario['email'] = (<String>usuario['email']).toLowerCase();
+            }
         })
     }
 }

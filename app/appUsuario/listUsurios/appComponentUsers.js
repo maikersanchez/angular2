@@ -23,6 +23,9 @@ var ComponentUsers = (function () {
             if (usuario['name'].includes(' ')) {
                 usuario['name'] = usuario['name'].split(' ')[0].trim();
             }
+            if (usuario['email'] !== null && usuario['email'] !== undefined) {
+                usuario['email'] = usuario['email'].toLowerCase();
+            }
         });
     };
     ComponentUsers = __decorate([
