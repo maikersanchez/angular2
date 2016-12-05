@@ -1,0 +1,28 @@
+<h1>Registro</h1>
+ <br>
+  <br>
+  
+<form [formGroup]="newUserForm" (ngSubmit)="sendUser()">
+  <div class="form-group">
+    <label for="name" >Nombre: </label>
+    <input class="form-control" formControlName="name" type="text" placeholder="Ingrese nombre">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="username">Nombre usuario: </label>
+    <input class="form-control"  formControlName="userName" type="text" placeholder="Ingrese nombre usuario">
+  </div>
+   <br>
+  <div class="form-group">
+    <label for="email" >Email: </label>
+    <input class="form-control"  formControlName="email" type="email" placeholder="Ingrese nombre usuario">
+  </div>
+   <br>
+  <div class="form-group">
+    <label for="phone">Telefono: </label>
+    <input class="form-control" formControlName="phone" pattern="[0-9]+" placeholder="Ingrese numero telefónico">
+  </div>
+  <br>
+  <button type="submit" class="btn btn btn-danger" [disabled]="!newUserForm.valid">Enviar</button>
+</form>
+

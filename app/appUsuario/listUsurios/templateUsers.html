@@ -1,0 +1,21 @@
+
+<div *ngIf="lUsuarios !== null && lUsuarios !== undefined">
+    <h1>Lista usuarios</h1>
+    <table class="table">
+        <thead class="thead-inverse">
+            <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <!--<th>Apellido</th>-->
+            <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of lUsuarios">
+            <th scope="row"  >{{usuario.id}}</th>
+            <th scope="row"  >{{usuario.name}}</th>
+            <th scope="row"  >{{usuario.email}}</th>
+            </tr>
+        </tbody>
+    </table>    
+</div>
